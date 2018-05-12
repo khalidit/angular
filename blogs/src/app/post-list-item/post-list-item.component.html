@@ -1,0 +1,18 @@
+<div class="card-body pl-3 pr-3 pb-1 mt-1">
+  <div class="card w-100">
+    <div class="card-body" 
+        [ngStyle]="{color:getItemColor(), backgroundColor:getItemBgColor()}">
+      <div class="card-title">
+        <h3 class="d-inline">{{ post.title }}</h3>
+        <h6 class="d-inline font-italic float-right">{{ post.creationDate | date: 'dd/MM/y, HH:mm a'}}</h6>
+      </div>
+      <p class="card-text text-justify">{{ post.content }}</p>
+      <button class="btn btn-success" (click)="onIncreaseLoveIts()">Love it</button>
+      <button class="btn btn-danger ml-1" (click)="onDecreaseLoveIts()">Don't love it</button>
+      <span [ngClass]="{'float-right p-2 rounded' : true,
+                        'badge badge-success' : post.loveIts > 0,
+                        'badge badge-danger' : post.loveIts < 0}"
+            *ngIf="post.loveIts !== 0">{{ post.loveIts }}</span>
+    </div>
+  </div>
+</div>
