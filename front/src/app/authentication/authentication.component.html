@@ -1,0 +1,7 @@
+<h2>Authentification</h2>
+<button class="btn btn-success" (click)="onSignIn()" *ngIf="!authenticationStatus">Se connecter</button>
+<button class="btn btn-danger" (click)="onSignOut()" *ngIf="authenticationStatus">Se déconnecter</button>
+
+<h6 for="message" [ngClass]="{'mt-3' : true,
+                              'text text-success' : authenticationStatus,
+                              'text text-danger' : !authenticationStatus}">{{authenticationMessage}}</h6>

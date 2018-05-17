@@ -1,0 +1,13 @@
+<h2 class="text-primary">Détail de l'appareil</h2>
+<ul class="list-group w-25 mt-5" *ngIf="appareil !== null">
+  <li [ngClass]="{'list-group-item' : true,
+                  'list-group-item-success' : appareil.isOn(),
+                  'list-group-item-danger' : appareil.isOff()}">
+    <h3>{{appareil.name}}</h3></li>
+  <li [ngClass]="{'list-group-item' : true,
+                  'list-group-item-success' : appareil.isOn(),
+                  'list-group-item-danger' : appareil.isOff()}">
+    {{appareil.status}}</li>
+</ul>
+<p><label class="text text-danger p-1 mt-2"  *ngIf="appareil === null">L'appreil ({{ id }}) n'existe pas ! </label></p>
+<a routerLink="/appareils" class="btn btn-success text-white mt-3">Retour à la liste</a>

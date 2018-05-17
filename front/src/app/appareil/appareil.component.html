@@ -1,0 +1,15 @@
+<li [ngClass]="{'list-group-item mt-2' : true, 
+                'list-group-item-success' : isAllume(),
+                'list-group-item-danger'  : isEteint()}">
+  <div>
+    <label [ngStyle]="{color:getColor()}">
+      <li class="glyphicon glyphicon-record" [ngStyle]="{color:getColor()}"></li>
+      Appreil : {{appareil.name}} -- Status : {{ appareil.status}}
+    </label>
+    <div class="float-right">
+      <button class="btn btn-success" (click)="onSwitchOn()" [disabled]="isAllume()">Allumer</button>
+      <button class="btn btn-danger ml-1" (click)="onSwitchOff()" [disabled]="isEteint()">Eteindre</button>
+      <a class="btn btn-primary ml-1" [routerLink]="id+1">Détail</a>
+    </div>
+  </div>
+</li>

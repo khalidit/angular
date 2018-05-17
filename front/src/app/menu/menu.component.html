@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li routerLinkActive="active">
+          <a class="nav-link" routerLink="">Home</a>
+        </li>
+        <li routerLinkActive="active">
+          <a class="nav-link" routerLink="authentication">Authentification</a>
+        </li>
+        <li routerLinkActive="active">
+          <a class="nav-link" routerLink="appareils">Appareils</a>
+        </li>
+        <li routerLinkActive="active">
+          <a class="nav-link" routerLink="add-appareil">Ajouter appareil</a>
+        </li>
+        <li routerLinkActive="active">
+          <a class="nav-link" routerLink="users">Utilisateurs</a>
+        </li>
+        <li routerLinkActive="active">
+          <a class="nav-link" routerLink="add-user">Ajouter utilisateur</a>
+        </li>
+      </ul>
+      <div class="navbar-right mr-3" *ngIf="isAuthenticated()"><p class="text-white">Vous êtes connecté depuis {{ secondes }} secondes</p></div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
