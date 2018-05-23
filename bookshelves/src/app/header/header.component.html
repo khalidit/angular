@@ -1,0 +1,25 @@
+<!-- Fixed navbar -->
+<nav class="navbar navbar-expand-md navbar-light" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" routerLink="/">
+  <img src="/assets/images/books-app.png" width="40" height="40" alt="">
+  </a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="activate">
+        <a class="nav-link" routerLink="/">Accueil</a>
+      </li>
+      <li class="nav-item" routerLinkActive="activate">
+        <a class="nav-link" routerLink="/books">Livres</a>
+      </li>
+      <li class="nav-item" routerLinkActive="activate">
+        <a class="nav-link" routerLink="/books/new">Nouveau livre</a>
+      </li>
+    </ul>
+    
+    <div class="navbar-nav-inline my-2 my-lg-0">
+        <button class="btn btn-outline-primary my-2 my-sm-0" routerLink="/auth/signup">Créer un compte</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 ml-2" routerLink="/auth/signin">Se connecter</button>
+    </div>
+  </div>
+</nav>
+
